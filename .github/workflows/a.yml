@@ -1,4 +1,4 @@
-name: [Just test]
+name: Just test
 
 on:
   push:
