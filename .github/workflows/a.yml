@@ -23,8 +23,7 @@ jobs:
              RUN ls && make main && ./main
              EOF
              docker image build . -t mytest
-             docker run -ti --rm -v `pwd`:/drive mytest cp /product /drive
-
+             docker run --rm -v `pwd`:/drive mytest cp /product /drive
        - name: Checkout
          uses: actions/checkout@v2
        - name: My first step
