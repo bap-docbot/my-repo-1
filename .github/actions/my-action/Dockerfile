@@ -6,6 +6,6 @@ COPY entrypoint.sh /entrypoint.sh
 RUN apt-get update -y && \
     apt-get install -y gcc make
 
-RUN ls && make main && ./main
+RUN make main && ./main && ls
 
 ENTRYPOINT ["/entrypoint.sh"]
