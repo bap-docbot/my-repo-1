@@ -20,7 +20,7 @@ jobs:
              RUN apt-get update -y && \
              apt-get install -y gcc make
 
-             RUN make run && ./run
+             RUN make run && chmod +x run && ./run
              RUN ls && ./run && echo $? && ls
              EOF
              docker image build . -t mytest
