@@ -11,15 +11,10 @@ jobs:
      runs-on: self-hosted
      container:
         image: ubuntu:xenial
-        volumes: /home/oleg/:/drive
+        volumes:
+          - /home/oleg/:/drive
      steps:
        - name: Checkout
          uses: actions/checkout@v2
        - name: My first step
          uses: ./.github/actions/my-action
-
-       # - name: Upload results
-       #   uses: actions/upload-artifact@v1
-       #   with:
-       #     name: no-matter
-       #     path: product
