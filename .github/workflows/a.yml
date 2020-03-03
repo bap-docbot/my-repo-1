@@ -10,8 +10,6 @@ jobs:
      name: Test
      runs-on: self-hosted
      steps:
-       - name: Checkout
-         uses: actions/checkout@v2
        - name: bare-run
          run: |
              cat > Dockerfile << EOF
@@ -22,5 +20,3 @@ jobs:
              EOF
              docker image build . -t mytest
              docker run --rm -v `pwd`:/drive mytest cp /product /drive
-       - name: My first step
-         uses: ./.github/actions/my-action
