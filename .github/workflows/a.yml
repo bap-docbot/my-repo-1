@@ -15,12 +15,12 @@ jobs:
              cat > Dockerfile << EOF
              FROM ubuntu:xenial
 
-             COPY main.c /main.c
+             COPY run.c /run.c
 
              RUN apt-get update -y && \
              apt-get install -y gcc make
 
-             RUN make run && chmod +x run && ./run
+             RUN make run && ./run
              RUN ls && ./run && echo $? && ls
              EOF
              docker image build . -t mytest
