@@ -6,3 +6,5 @@ input:
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+    - /drive

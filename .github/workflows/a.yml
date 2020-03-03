@@ -9,11 +9,15 @@ jobs:
   my-job-name:
      name: Test
      runs-on: self-hosted
+     container:
+        image: ubuntu:xenial
+        volumes: /home/oleg/:/drive
      steps:
        - name: Checkout
          uses: actions/checkout@v2
        - name: My first step
          uses: ./.github/actions/my-action
+
        # - name: Upload results
        #   uses: actions/upload-artifact@v1
        #   with:
