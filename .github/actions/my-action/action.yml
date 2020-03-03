@@ -6,4 +6,3 @@ input:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  volumes: /home/oleg/factory/:/drive

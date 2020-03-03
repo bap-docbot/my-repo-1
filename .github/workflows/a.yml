@@ -9,6 +9,8 @@ jobs:
   my-job-name:
      name: Test
      runs-on: self-hosted
+     container:
+       options: -v /home/oleg/factory/:/drive
      steps:
        - name: Checkout
          uses: actions/checkout@v2
