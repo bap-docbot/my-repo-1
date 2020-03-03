@@ -15,13 +15,8 @@ jobs:
              cat > Dockerfile << EOF
              FROM ubuntu:xenial
 
-             COPY run.c /run.c
-
-             RUN apt-get update -y && \
-             apt-get install -y gcc make
-
-             RUN make run && ./run
-             RUN ls && ./run && echo $? && ls
+             RUN echo "aaaa" > product
+             RUN ls
              EOF
              docker image build . -t mytest
              docker run --rm -v `pwd`:/drive mytest cp /product /drive
