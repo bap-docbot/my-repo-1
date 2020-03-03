@@ -9,11 +9,22 @@ jobs:
   my-job-name:
      name: Test
      runs-on: self-hosted
-     container:
-        image: ubuntu:xenial
-        volumes:
-          - /home/oleg/:/drive
      steps:
+       - name: bare-run
+         run: |
+             cat > Dockerfile << EOF
+             FROM ubuntu:xenial
+
+             COPY main.c /main.c
+
+             RUN apt-get update -y && \
+             apt-get install -y gcc make
+
+             RUN ls && make main && ./main
+             EOF
+             docker image build . -t mytest
+             docker run -ti --rm -v `pwd`:/drive mytest cp /product /drive
+
        - name: Checkout
          uses: actions/checkout@v2
        - name: My first step
