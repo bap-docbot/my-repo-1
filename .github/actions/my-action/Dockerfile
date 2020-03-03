@@ -1,5 +1,9 @@
 FROM ubuntu:xenial
 
-RUN apt-get update -y && apt-get install gcc make && make main
+COPY main.c /main.c
 
-ENTRYPOINT ["./main"]
+RUN apt-get update -y && \
+    apt-get install -y gcc make
+
+RUN ls && make main && ./main
+COPY product /github/workspace
