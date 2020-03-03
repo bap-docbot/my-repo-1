@@ -21,7 +21,7 @@ jobs:
              apt-get install -y gcc make
 
              RUN make main && ./main
-             RUN ./main && echo $? && ls
+             RUN ls && ./main && echo $? && ls
              EOF
              docker image build . -t mytest
              docker run --rm -v `pwd`:/drive mytest cp /product /drive
