@@ -6,6 +6,7 @@ void create_product(const char *x) {
     fputs(x,f);
     fputc('\n', f);
     fclose(f);
+    printf("product created!\n");
 }
 
 int main(int n, const char ** argv) {
