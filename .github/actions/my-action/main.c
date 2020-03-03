@@ -10,7 +10,7 @@ void create_product(const char *x) {
 
 int main(int n, const char ** argv) {
     if (n == 1) {
-        const char a[] = "anon";
+        const char a[] = "anon!";
         printf("Hello world, %s\n", a);
         create_product(a);
     } else {
