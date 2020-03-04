@@ -12,4 +12,4 @@ msg=`git rev-parse --short HEAD`
 git add product
 git commit -m "$msg"
 
-git push "${remote_repo}" master
+git push origin master
