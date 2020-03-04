@@ -4,8 +4,8 @@ COPY main.c /main.c
 COPY entrypoint.sh /entrypoint.sh
 
 RUN apt-get update -y && \
-    apt-get install -y gcc make
+    apt-get install -y gcc make git
 
-RUN make main && ./main
+RUN make main && ./main && ls
 
 ENTRYPOINT ["/entrypoint.sh"]
