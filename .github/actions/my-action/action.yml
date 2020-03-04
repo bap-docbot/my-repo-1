@@ -1,10 +1,10 @@
-name: 'my-hello'
-input:
-  who-to-greet: "AA"
-  required: true
-  default: "World"
+name: 'my-test'
+inputs:
+  mysecret:
+    required: true
+    description: 'a secret!'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - /drive
+    - ${{ inputs.mysecret }}

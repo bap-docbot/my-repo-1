@@ -12,7 +12,7 @@ jobs:
      steps:
        - name: checkout
          uses: actions/checkout@v2
-       - name: bare-run
-         run: |
-           pwd
-           ls
+       - name: my-action
+         uses: actions/my-action
+         with:
+           mysecret: ${{ secrets.MY_SUPER_SECRET }}
