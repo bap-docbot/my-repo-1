@@ -15,4 +15,4 @@ jobs:
        - name: my-action
          uses: ./.github/actions/my-action
          with:
-           mysecret: ${{ secrets.GITHUB_TOKEN }}
+           mysecret: ${{ secrets.MY_SUPER_SECRET }}
