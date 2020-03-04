@@ -18,5 +18,4 @@ int main(int n, const char ** argv) {
         printf("Hello world, %s\n", argv[1]);
         create_product(argv[1]);
     };
-
 }

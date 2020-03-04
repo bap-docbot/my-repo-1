@@ -7,7 +7,7 @@ remote_repo="https://${GITHUB_ACTOR}:${INPUT_MYSECRET}@github.com/gitoleg/my-rep
 #git config --global user.name ${GITHUB_ACTOR}
 #git config --global user.email ${GITHUB_ACTOR}@users.noreply.github.com
 
-git remote add my-remote $remote_repo
+git remote set-url origin $remote_repo
 
 cp /product .
 msg=`git rev-parse --short HEAD`
