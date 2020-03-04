@@ -11,5 +11,6 @@ cp /product .
 msg=`git rev-parse --short HEAD`
 git add product
 git commit -m "$msg"
+git remote -v
 
 git push origin master
