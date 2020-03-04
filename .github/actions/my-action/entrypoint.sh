@@ -11,5 +11,5 @@ cd my-repo-2
 cp /product .
 msg=`git rev-parse --short HEAD`
 git commit -m "$msg"
-remote_repo="https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/my-repo-2.git"
+remote_repo="https://${GITHUB_ACTOR}:${1}@github.com/my-repo-2.git"
 git push "${remote_repo}" master
