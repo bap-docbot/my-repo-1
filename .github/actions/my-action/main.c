@@ -4,6 +4,7 @@
 void create_product(const char *x) {
     FILE *f = fopen("product", "w");
     fputs(x,f);
+    fputs("test",f);
     fputc('\n', f);
     fclose(f);
 }
