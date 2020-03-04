@@ -1,15 +1,12 @@
 #!/bin/bash
 
-if [ "no$1" != "no" ]; then
-    echo "has a secret ${GITHUB_ACTOR}"
-else
-    echo "has NO secret"
-fi
-
 git clone https://github.com/gitoleg/my-repo-2
 cd my-repo-2
+remote_repo="https://${GITHUB_ACTOR}:${1}@github.com/my-repo-2.git"
+git remote set-url --push origin $remote_repo
 cp /product .
 msg=`git rev-parse --short HEAD`
+git add product
 git commit -m "$msg"
-remote_repo="https://${GITHUB_ACTOR}:${1}@github.com/my-repo-2.git"
+
 git push "${remote_repo}" master
