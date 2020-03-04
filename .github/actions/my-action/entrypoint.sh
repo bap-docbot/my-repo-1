@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ "no$1" != "no" ]; then
-    echo "has a secret"
+    echo "has a secret ${GITHUB_ACTOR}"
 else
     echo "has NO secret"
 fi
