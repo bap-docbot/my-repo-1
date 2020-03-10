@@ -21,7 +21,4 @@ git config --global user.email norelpy@github.com
 git add .
 git commit -m "$msg"
 echo pushing
-git push "${remote_repo}" HEAD:master
-
-
-# git push $remote_repo master
+git push $remote_repo master
