@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
+ls
+
 TOKEN=$1
 
 check () {
