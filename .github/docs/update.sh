@@ -15,10 +15,10 @@ git clone https://$repo
 cd my-repo-1
 msg=`git rev-parse --short HEAD`
 touch 1
-git config --global user.name $GITHUB_ACTOR
-
+# git config --global user.name $GITHUB_ACTOR
+# git config --global user.email "<>"
 
 git add .
-git commit -m "$msg"
+git commit -m "$msg" --author "$GITHUB_ACTOR <>"
 echo pushing
 git push $remote_repo master
