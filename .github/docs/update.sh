@@ -19,6 +19,6 @@ touch 1
 # git config --global user.email "<>"
 
 git add .
-git -c "user.name=$GITHUB_ACTOR" -c "user.email=<>" commit -m "$msg"
+git -c "user.name=$GITHUB_ACTOR" -c "user.email=noreply@github.com>" commit -m "$msg"
 echo pushing
 git push $remote_repo master
