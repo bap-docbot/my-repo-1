@@ -19,7 +19,7 @@ remote_repo="https://${GITHUB_ACTOR}:${TOKEN}@${repo}.git"
 git clone https://$repo
 cd my-repo-1
 msg=`git rev-parse --short HEAD`
-touch 1
+touch 2
 git config --global user.name $GITHUB_ACTOR
 git config --global user.email "noreply@github.com"
 
