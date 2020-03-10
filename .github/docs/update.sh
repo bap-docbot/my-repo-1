@@ -10,4 +10,4 @@ check () {
 
 echo "WE ARE HERE "
 check "actor" $GITHUB_ACTOR
-check "token" $INPUT_TOKEN
+check "token" $1
