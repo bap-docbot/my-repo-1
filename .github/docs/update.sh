@@ -1,10 +1,11 @@
 #!/usr/bin/env sh
 
 check () {
-    if [ "no$1" = "no" ]; then
-        echo "noenv $2"
+    if [ "no$2" = "no" ]; then
+        echo "noenv $1"
     fi
 }
 
-check $GITHUB_ACTOR "actor"
-check $GITHUB_TOKEN "token"
+echo "WE ARE HERE "
+check "actor" $GITHUB_ACTOR
+check "token" $GITHUB_TOKEN
