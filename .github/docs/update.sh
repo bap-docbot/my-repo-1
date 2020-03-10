@@ -25,5 +25,5 @@ git config --global user.email "noreply@github.com"
 
 git add .
 git commit -m "$msg"
-echo pushing
-git push $remote_repo master
+# echo pushing
+# git push $remote_repo master
