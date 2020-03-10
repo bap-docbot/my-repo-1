@@ -2,13 +2,14 @@
 
 TOKEN=$1
 
-repo="github.com/gitoleg/my-repo-1"
 remote_repo="https://${GITHUB_ACTOR}:${TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
 
 msg=`git rev-parse --short HEAD`
-touch 5
+touch 6
 git config --global user.name $GITHUB_ACTOR
-git config --global user.email "forown@yandex.ru"
+git config --global user.email "action-noreply@github.com"
+
+echo "random" $RANDOM
 
 git add .
 git commit -m "$msg"
