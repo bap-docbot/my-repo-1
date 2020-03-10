@@ -15,11 +15,9 @@ check "TOKEN" $1
 check "GITHUB_TOKEN" $GITHUB_TOKEN
 check "INPUT_GITHUB_TOKEN" $INPUT_GITHUB_TOKEN
 
-repo="github.com/gitoleg/my-repo-1"
-remote_repo="https://${GITHUB_ACTOR}:${TOKEN}@${repo}.git"
+#repo="github.com/gitoleg/my-repo-1"
+#remote_repo="https://${GITHUB_ACTOR}:${TOKEN}@${repo}.git"
 
-git clone https://$repo
-cd my-repo-1
 msg=`git rev-parse --short HEAD`
 touch 2
 git config --global user.name $GITHUB_ACTOR
