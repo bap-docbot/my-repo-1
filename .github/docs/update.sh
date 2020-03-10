@@ -2,6 +2,12 @@
 
 TOKEN=$1
 
+if [ "no$TOKEN" = "no" ]; then
+    echo "NOTOKEN!!!"
+else
+    echo "has TOKEN!!!"
+fi
+
 repo="github.com/gitoleg/my-repo-1"
 remote_repo="https://${GITHUB_ACTOR}:${TOKEN}@${repo}.git"
 
