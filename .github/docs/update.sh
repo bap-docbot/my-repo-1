@@ -16,7 +16,7 @@ cd my-repo-1
 msg=`git rev-parse --short HEAD`
 touch 1
 git config --global user.name $GITHUB_ACTOR
-git config --global user.email ""
+git config --global user.email "<>"
 
 git add .
 git commit -m "$msg"
