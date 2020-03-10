@@ -14,7 +14,3 @@ jobs:
          uses: actions/checkout@v2
        - name: my-action
          run: .github/docs/update.sh {{ secrets.GITHUB_TOKEN }}
-       - name: push
-         uses: ad-m/github-push-action@master
-         with:
-             github_token: ${{ secrets.GITHUB_TOKEN }}
