@@ -1,13 +1,15 @@
 #!/usr/bin/env sh
 
-check () {
-    if [ "no$2" = "no" ]; then
-        echo "noenv $1"
-    else
-        echo "has $1"
-    fi
-}
+TOKEN=$1
 
-echo "WE ARE HERE "
-check "actor" $GITHUB_ACTOR
-check "token" $1
+repo="github.com/gitoleg/my-repo-1"
+remote_repo="https://${GITHUB_ACTOR}:${TOKEN}@${repo}.git"
+
+git clone $repo
+cd my-repo-1
+msg=`git rev-parse --short HEAD`
+touch $RANDOM
+
+git add .
+git commit -m "$msg"
+git push $remote_repo master
