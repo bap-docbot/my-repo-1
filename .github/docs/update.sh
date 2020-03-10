@@ -9,7 +9,7 @@ else
 fi
 
 repo="github.com/gitoleg/my-repo-1"
-remote_repo="https://${GITHUB_ACTOR}:${TOKEN}@${repo}.git"
+remote_repo="https://${GITHUB_ACTOR}:${INPUT_GITHUB_TOKEN}@${repo}.git"
 
 git clone https://$repo
 cd my-repo-1
@@ -20,4 +20,7 @@ git config --global user.email norelpy@github.com
 
 git add .
 git commit -m "$msg"
-git push $remote_repo master
+git push "${remote_repo}" HEAD:master
+
+
+# git push $remote_repo master
