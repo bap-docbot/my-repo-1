@@ -2,10 +2,11 @@
 
 TOKEN=$1
 
-if [ "no$TOKEN" = "no" ]; then
-    echo "NOTOKEN!!!"
-else
+if [ "no$TOKEN" != "no" ]; then
     echo "has TOKEN!!!"
+else
+    echo "NOTOKEN!!!"
+
 fi
 
 repo="github.com/gitoleg/my-repo-1"
@@ -19,7 +20,6 @@ git config --global user.name $GITHUB_ACTOR
 git config --global user.email "noreply@github.com"
 
 git add .
-#git -c "user.name=$GITHUB_ACTOR" -c "user.email=noreply@github.com>" commit -m "$msg"
 git commit -m "$msg"
 echo pushing
 git push $remote_repo master
