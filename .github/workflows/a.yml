@@ -1,13 +1,13 @@
 name: Just test
 
-on:
-push:
-    branches:
-    - master
+# on:
+# push:
+#    branches:
+#    - master
 
-#on:
-#  schedule:
-#    - cron: '*/5 * * * *'
+on:
+  schedule:
+    - cron: '0 */1 * * *'
 
 jobs:
   my-job-name:
