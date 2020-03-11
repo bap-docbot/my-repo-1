@@ -17,7 +17,7 @@ jobs:
        - name: checkout
          uses: actions/checkout@v2
        - name: update
-         run:
+         run: |
            docker image build .github/docs -t docs
            docker run --rm -v `pwd`:/drive docs
            docker image rm docs
