@@ -1,7 +1,7 @@
 name: Just test
 
 on:
-push:
+  push:
    branches:
    - master
 
