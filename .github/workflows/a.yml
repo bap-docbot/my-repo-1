@@ -16,5 +16,7 @@ jobs:
      steps:
        - name: checkout
          uses: actions/checkout@v2
+       - name: lookaround
+         run: ls -la
        - name: my-action
          run: .github/docs/update.sh {{ secrets.GITHUB_TOKEN }}
