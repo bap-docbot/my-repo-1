@@ -19,7 +19,7 @@ jobs:
        - name: update
          run: |
            mkdir mytmp
-           group add opam
+           groupadd opam
            useradd opam -g opam
            chown opam:opam mytmp
            docker image build .github/docs -t docs
