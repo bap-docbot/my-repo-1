@@ -21,7 +21,6 @@ jobs:
            docker image build .github/docs -t docs
            docker run --rm -v `pwd`:/drive docs
            docker image rm docs
-         run: .github/docs/update.sh
        - name: lookaround
          run: ls -l
        - name: push
