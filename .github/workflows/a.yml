@@ -16,6 +16,8 @@ jobs:
      steps:
        - name: checkout
          uses: actions/checkout@v2
+       - name: whoami
+         run: whoami
        - name: lookaround
          run: ls -la
        - name: my-action
