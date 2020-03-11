@@ -16,9 +16,13 @@ jobs:
      steps:
        - name: checkout
          uses: actions/checkout@v2
-       - name: whoami
-         run: whoami
+       - name: update
+         run:
+           docker image build .github/docs -t docs
+           docker run --rm -v `pwd`:/drive docs
+           docker image rm docs
+         run: .github/docs/update.sh
        - name: lookaround
-         run: ls -la
-       - name: my-action
-         run: .github/docs/update.sh {{ secrets.GITHUB_TOKEN }}
+         run: ls -l
+       - name: push
+         run: .github/docs/push.sh {{ secrets.GITHUB_TOKEN }}
