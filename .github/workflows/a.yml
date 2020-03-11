@@ -20,7 +20,7 @@ jobs:
          run: |
            mkdir mytmp
            sudo groupadd opam
-           useradd opam -g opam
+           sudo useradd opam -g opam
            chown opam:opam mytmp
            docker image build .github/docs -t docs
            docker run --rm -v `pwd`:/drive docs
