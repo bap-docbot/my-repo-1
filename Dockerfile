@@ -2,7 +2,7 @@ FROM ocaml/opam2:ubuntu-16.04
 
 WORKDIR /home/opam
 
-RUN ls -l && \
+RUN ls -l \
  && git clone https://github.com/gitoleg/my-repo-2 \
  && cd my-repo-2 \
  && git config --global user.name actor \
