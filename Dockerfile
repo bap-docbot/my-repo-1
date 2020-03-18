@@ -2,7 +2,7 @@ FROM ocaml/opam2:ubuntu-19.04
 
 WORKDIR /home/opam
 
-RUN sudo apt-get update && apt-get install git --yes \
+RUN sudo apt-get update && sudo apt-get install git --yes \
  && git --version
 
 
