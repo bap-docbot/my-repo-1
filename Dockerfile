@@ -1,5 +1,5 @@
-FROM ocaml/opam2:ubuntu-19.04
+FROM debian:stable-slim
 
 WORKDIR /home/opam
 
-RUN git clone https://github.com/gitoleg/bap
+RUN echo "here I am!"
