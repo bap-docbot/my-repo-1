@@ -1,5 +1,3 @@
 FROM debian:stable-slim
-
 WORKDIR /home/myfolder
-
-RUN echo "here I am!"
+RUN sh -c "echo 'here I am' > 1.file"
