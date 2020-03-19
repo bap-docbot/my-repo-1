@@ -1,5 +1,6 @@
-FROM debian:stable-slim
+# FROM debian:stable-slim
+FROM scratch
 
 WORKDIR /home/opam
 
-RUN echo "here I am!"
+#RUN echo "here I am!"
