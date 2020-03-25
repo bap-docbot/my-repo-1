@@ -3,7 +3,8 @@ WORKDIR /home/myfolder
 
 ARG MY_VAR 
 
-RUN mkdir -p ~/.ssh \
+RUN apt-get update && apt-get install git --yes \
+ && mkdir -p ~/.ssh \
  && printf "$MY_VAR" > ~/.ssh/id_rsa \
  && chmod 400 ~/.ssh/id_rsa \
  && git clone git@github.com:gitoleg/my-repo-2 \
