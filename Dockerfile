@@ -2,7 +2,7 @@ FROM debian:stable-slim
 WORKDIR /home/myfolder
 
 #ARG mykey
-ENV MY_VAR
+ENV MY_VAR 1
 
 # RUN mkdir -p ~/.ssh \
 RUN echo "var is $MY_VAR" 
