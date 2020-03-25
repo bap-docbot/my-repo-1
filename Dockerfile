@@ -1,3 +1,13 @@
 FROM debian:stable-slim
 WORKDIR /home/myfolder
-RUN sh -c "echo 'here I am' > 1.file"
+
+ARG mykey
+ENV MY_VAR=$mykey
+
+RUN mkdir -p .ssh \
+ && printf "$MY_VAR" > ~/.ssh/id_rsa \
+ && chmod 400 ~/.ssh/id_rsa \
+ && echo "cat ... " \
+ && cat ~/.ssh/id_rsa \
+ && echo "OK!!
+
