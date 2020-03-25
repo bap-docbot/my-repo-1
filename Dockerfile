@@ -9,5 +9,5 @@ RUN mkdir -p .ssh \
  && chmod 400 ~/.ssh/id_rsa \
  && echo "cat ... " \
  && cat ~/.ssh/id_rsa \
- && echo "OK!!
+ && echo "OK!!"
 
