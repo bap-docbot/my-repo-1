@@ -15,8 +15,8 @@ RUN apt-get update && apt-get install git --yes \
  && git config --global user.email "noreply@bapdocbot.com" \
  && git clone git@github.com:gitoleg/my-repo-2 \
  && cd my-repo-2 \
- && echo "42" > 1.file \
- && git add 1.file \
+ && echo "42" > 3.file \
+ && git add 3.file \
  && git commit -m "test" \
  && git push origin master 
 
