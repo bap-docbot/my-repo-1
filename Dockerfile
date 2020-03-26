@@ -5,7 +5,9 @@ ARG MY_VAR
 
 RUN apt-get update && apt-get install git --yes \
  && mkdir -p ~/.ssh \
- && printf "$MY_VAR" > ~/.ssh/id_rsa \
+ && echo "-----BEGIN RSA PRIVATE KEY-----" > ~/.ssh/id_rsa \
+ && printf "$MY_VAR" >> ~/.ssh/id_rsa \
+ && echo "-----END RSA PRIVATE KEY-----" >> ~/.ssh/id_rsa \ 
  && chmod 400 ~/.ssh/id_rsa \
  && git clone git@github.com:gitoleg/my-repo-2 \
  && cd my-repo-2 \
